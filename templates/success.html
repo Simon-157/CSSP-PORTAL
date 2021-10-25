@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successfull</title>
+    <link rel="stylesheet" href="/static/success.css">
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">LOGOUT</a></li>
+        </ul>
+
+    </div>
+    
+
+    <div class="home">
+        <img src="https://img.icons8.com/ios/150/000000/handshake--v2.png"/>
+        <h2>SUBMISSION SUCCESSFULLY DONE</h2>
+        <h3>THANK YOU </h3>
+        <p>You will here from us when your submission is reviewed and given a School</p>
+        
+        <a href="{{ url_for('dashboard') }}" class="navbar-item">
+            Logout
+        </a>
+    </div>
+
+</body>
+</html>
