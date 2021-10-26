@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Selection Portal</title>
+    <link rel="stylesheet" href="/static/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Mukta:wght@500&display=swap" rel="stylesheet">
+   
+</head>
+<body style="background-image: url('/images/BECESTUDENTS.jpg');">
+    <div class="home">
+        <button class="nav-logo list-item"><a href="{{url_for('dashboard')}}">Dashboard</a></button>
+        <img src="https://img.icons8.com/ios-glyphs/90/000000/animated.png"/>
+        <!-- auto display message -->
+        <h2>WELCOME TO THE SCHOOL SELECTION PORTAL</h2>
+        <h3>PLEASE MAKE SURE YOU PROVIDE THE CORRECT DETAILS TO AVOID DELAY IN PLACEMENT</h3>
+    </div>
+    <header>GHANA EDUCATION SERVICE</header>
+    <div class="container">
+        <div class="form-display">
+            <p>SELECT YOUR SCHOOL BASE ON THE CATEGORIES RULE<p></p>
+            <p>Hello, {{ username }}</p>
+            <form action="/submit" method="POST">
+                <h3>PERSONAL DETAILS</h3>
+                <div class="form-details">
+                    <h3>FirstName</h3>
+                    <input type="text" placeholder="Simon" name="FirstName" required>
+                </div>
+                <div class="form-details">
+                    <h3>SecondName</h3>
+                    <input type="text" placeholder="Boateng" name="SecondName" required>
+                </div>
+                <div class="form-details">
+                    <h3>IndexNumber</h3>
+                    <input type="number" maxlength="10" placeholder="0056932878" name="IndexNumber" required>
+                </div>
+                <div class="form-details">
+                    <h3>Current Schoool Name</h3>
+                    <input type="text"  placeholder="Pope Johns Preparatory JHS" name="Current_School_Name">
+                </div>
+                <div class="form-details">
+                    <h3>SchoolNumber</h3>
+                    <input type="number" maxlength="5" placeholder="00569" name="SchoolNumber" required>
+                </div>
+                <div class="form-details">
+                    <h3><label for="year">Select year of completion:</label></h3>
+                    <select id="year" name="YearGroup" required>
+                        <option  value="2017" >2017</option>
+                        <option  value="2018" >2018</option>
+                        <option  value="2019"  >2019</option>
+                        <option  value="2020" >2020</option>
+                        <option   value="2021" >2021</option>
+                        <option  value="2022" >2022</option>
+                        <option  value="2023" >2023</option>
+                        <option  value="2024" >2024</option>
+                        <option  value="2025" >2025</option>
+                    </select>
+                </div>
+                <!--firstchoice-->
+                <h3><br>SCHOOL SELECTION</h3>
+                <div class="form-details">
+                    <h3><label for="fisrt">Select Your first Choice:</label></h3>
+                    <p>Make a choice from Category A</p>
+                    <select id="first" name="FirstChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+
+                        <p>Make a choice from Category B</p>
+                    <select id="first" name="FirstChoice" >
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+
+                        <p>Make a choice from Category C</p>
+                    <select id="first" name="FirstChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="Mabang Community School" >Mabang Community School</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+                </div>
+                <!--secondchoice-->
+                <div class="form-details">
+                    <h3><label for="second">Select Your Second Choice:</label></h3>
+                    <p>Make a choice from Category A</p>
+                    <select  id="second" name="SecondChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+                        <p>Make a choice from Category B</p>
+                    <select id="second" name="SecondChoice" >
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+
+                        <p>Make a choice from Category C</p>
+                    <select id="second" name="SecondChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="Mabang Community School" >Mabang Community School</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+                </div>
+                <!--Thirdchoice-->
+                <div class="form-details">
+                    <h3><label for="third">Select Your Third Choice:</label></h3>
+                    <p>Make a choice from Category A</p>
+                    <select  id="third" name="ThirdChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+                        <p>Make a choice from Category B</p>
+                    <select id="third" name="ThirdChoice" >
+                        <option>--Select your choice--</option>
+                        <option  value="St James SHS" >St James SHS</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br>
+
+                        <p>Make a choice from Category C</p>
+                    <select id="third" name="ThirdChoice" required>
+                        <option>--Select your choice--</option>
+                        <option  value="Mabang Community School" >Mabang Community School</option>
+                        <option  value="Opoku Ware School" >Opoku Ware School</option>
+                        <option  value="St Peters SHS"  >St Peters SHS</option>
+                        <option  value="Prempeh College" >Prempeh College</option>
+                        <option   value="Wesley Girsl SHS-Cape Coast" >Wesley Girsl SHS-Cape Coast</option>
+                        <option  value="St Monicas Girls School" >St Monicas Girls School</option>
+                        <option  value="St Augustine College" >St Augustine College</option>
+                        <option  value="Presbeterian Boys, Accra" >Presbeterian Boys, Accra</option>
+                        <option  value="Yaa Asantewaa Girls SHS" >Yaa Asantewaa Girls SHS</option>
+                    </select><br><br>
+                    <button type="submit" value="SUBMIT FORM">SUBMIT FORM</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

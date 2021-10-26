@@ -109,7 +109,7 @@ button{
 
 /* Sign in POPUP STYLING */
 .popup{
-    display:none;
+    display:block;
     overflow: auto; 
     position: fixed;
     padding: 30px;
@@ -203,7 +203,7 @@ i.fa-user-circle{
 
 /* sign up styling */
 .popup2{
-    display:none;
+    display:block;
     overflow: auto; 
     position: fixed;
     padding: 30px;
@@ -229,4 +229,23 @@ i.fa-user-circle{
 
 .rem{
     color: aqua;
+}
+
+/* homepage styling */
+
+.container-home{
+    background-repeat: no-repeat;
+    opacity: 0.6; 
+    background-image: url('https://guardian.ng/wp-content/uploads/2020/09/students-in-an-examination-hall-1062x596.jpg');
+    background-position: relative;
+    width: 100%;
+    height:35rem;
+    background-size: cover;
+}
+
+
+.log-rem{
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
 }
